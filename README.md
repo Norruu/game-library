@@ -1,58 +1,112 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎮 PixelVault - Game Library Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+PixelVault is a sleek, neon-themed full-stack web application built with **Laravel 11** and **Tailwind CSS**. It acts as a personal database for gamers to catalog, organize, and track their entire video game collection.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Authentication System:** Secure user registration, login, and profile management (powered by Laravel Breeze).
+- **Full CRUD Functionality:** 
+  - **Create:** Add new games to your library.
+  - **Read:** View your collection in a responsive, glowing card grid.
+  - **Update:** Edit game details or swap out cover art.
+  - **Delete:** Securely remove games from your database.
+- **Image Uploads:** Upload and store custom cover images for your games.
+- **Dynamic Dashboard:** A "Hub" acting as the main command center.
+- **Custom UI/UX:** A dark, glassmorphism gaming aesthetic with purple and cyan neon accents.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🛠️ Tech Stack
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Backend:** Laravel 11 (PHP)
+- **Frontend:** Blade Templating, Tailwind CSS, Alpine.js
+- **Database:** SQLite (Default) / MySQL
+- **Authentication:** Laravel Breeze
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## 🚀 How to Run Locally
 
-## Agentic Development
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+### Prerequisites
 
+Ensure you have the following installed on your machine:
+- [PHP](https://www.php.net/downloads) (v8.2 or higher)
+- [Composer](https://getcomposer.org/)
+- [Node.js & npm](https://nodejs.org/en/download/)
+
+### Installation Steps
+
+**1. Clone or Download the Repository**
+If you have Git installed, clone the repo. Otherwise, download the ZIP and extract it.
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone <your-repository-url>
+cd game-library
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+**2. Install PHP Dependencies**
+```bash
+composer install
+```
 
-## Contributing
+**3. Install JavaScript Dependencies**
+```bash
+npm install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**4. Configure the Environment File**
+Copy the example `.env` file to create your own configuration.
+```bash
+cp .env.example .env
+```
 
-## Code of Conduct
+**5. Generate the Application Key**
+```bash
+php artisan key:generate
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+**6. Set up the Database**
+By default, Laravel 11 uses SQLite. Run the migrations to build the database tables. (If prompted to create the SQLite database file, type `yes`).
+```bash
+php artisan migrate
+```
+*(Note: If you prefer MySQL, update the `DB_*` variables in your `.env` file before running the migrate command).*
 
-## Security Vulnerabilities
+**7. Link the Storage Folder**
+This step is **crucial** for the game cover images to display correctly.
+```bash
+php artisan storage:link
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+**8. Compile Frontend Assets**
+Build the Tailwind CSS styling and JavaScript files.
+```bash
+npm run build
+```
+*(Alternatively, you can run `npm run dev` in a separate terminal to watch for changes while you develop).*
 
-## License
+**9. Start the Local Development Server**
+```bash
+php artisan serve
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 🕹️ Usage
+
+1. Open your web browser and navigate to `http://localhost:8000`.
+2. You will be greeted by the PixelVault Landing Page. Click **Initialize Setup** (or Register) to create an account.
+3. Once logged in, navigate to **My Games** using the top navigation bar.
+4. Click **+ Add New Game**, fill out the details, upload a cover image, and start building your collection!
+
+---
+
+## 👥 The Dev Guild (Team)
+
+- **Merck Daven Jusos** - Lead Architect / Backend Mage
+- **Angel Mae Bandola** - UI/UX Designer / Frontend Ninja
+- **Russel Mae Guisinga** - Data Architect / Security Tank
+
