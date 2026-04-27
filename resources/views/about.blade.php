@@ -22,7 +22,7 @@
             </div>
 
             <!-- Team Roster Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
 
                 <!-- Player 1: Lead Dev -->
                 <div class="bg-gray-800/60 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-6 relative overflow-hidden group hover:border-purple-400 transition-all duration-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] hover:-translate-y-2">
@@ -59,6 +59,23 @@
                 </div>
 
                 <!-- Player 3: Database -->
+                <div class="bg-gray-800/60 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-6 relative overflow-hidden group hover:border-blue-400 transition-all duration-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+
+                    <div class="flex items-center justify-center mb-6 relative">
+                        <div class="w-24 h-24 rounded-full bg-gray-900 border-4 border-blue-500 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.5)] z-10">
+                            <span class="text-3xl">🛡️</span>
+                        </div>
+                    </div>
+
+                    <div class="text-center relative z-10">
+                        <span class="text-xs font-black text-blue-400 uppercase tracking-widest mb-1 block">Player 3</span>
+                        <h3 class="text-2xl font-black text-white uppercase tracking-wide mb-1">Russel Mae Guisinga</h3>
+                        <p class="text-gray-400 text-sm mb-4">Data Architect / Security Tank</p>
+                    </div>
+                </div>
+
+                <!-- Player 4: Database -->
                 <div class="bg-gray-800/60 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-6 relative overflow-hidden group hover:border-blue-400 transition-all duration-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:-translate-y-2">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
 
